@@ -1,45 +1,59 @@
 import React from "react";
+import api from "../../services/api";
+
 import whatsappIcon from "../../assets/images/icons/whatsapp.svg";
+
 import "./styles.css";
 
-function TeacherItem() {
+export interface Teacher {
+  id: number;
+  avatar: string;
+  bio: string;
+  cost: number;
+  name: string;
+  subject: string;
+  whatsapp: number;
+}
+
+interface TeacherItemProps {
+  teacher: Teacher;
+}
+
+const TeacherItem: React.FunctionComponent<TeacherItemProps> = ({
+  teacher,
+}) => {
+  function createNewConnection() {
+    api.post("connections", {
+      user_id: teacher.id,
+    });
+  }
+
   return (
     <article className="teacher-item">
       <header>
-        <img
-          src="https://avatars1.githubusercontent.com/u/16246420?s=460&u=22d41183957818f07108f9a1e8175f8d9095f59b&v=4"
-          alt="Roberta Soares"
-        />
+        <img src={teacher.avatar} alt={teacher.name} />
         <div>
-          <strong>Roberta Soares</strong>
-          <span>História</span>
+          <strong>{teacher.name}</strong>
+          <span>{teacher.subject}</span>
         </div>
       </header>
-
-      <p>
-        Hello! Welcome wave to my profile rocket <br />
-        I'm Roberta Soares, I'm a Software Engineer Front-end woman_technologist
-        who is passionate about technology and innovation, crazy about
-        challenges and I want to help transform the world into a more digital
-        place!
-        <br />
-        telescope I'm currently working on React apps/systems
-        <br />
-        seedling I’m currently learning Vue and Node.js.
-      </p>
-
+      <p>{teacher.bio}</p>
       <footer>
         <p>
-          Preço/hora
-          <strong>R$ 80,00</strong>
+          Price/Hour
+          <strong>{teacher.cost}</strong>
         </p>
-        <button type="button">
+        <a
+          target="_blank"
+          onClick={createNewConnection}
+          href={`https://wa.me/${teacher.whatsapp}?text=Hello%20There`}
+        >
           <img src={whatsappIcon} alt="Whatsapp" />
-          Entrar em contato
-        </button>
+          Contact
+        </a>
       </footer>
     </article>
   );
-}
+};
 
 export default TeacherItem;
