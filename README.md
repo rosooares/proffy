@@ -6,10 +6,6 @@
 <h1 align="center">
     Next Level Week by <img src="assets/rocketseat.svg">
     </h1>
-  
-<p align="center">
-  <img width="250" src="assets/logo-nlw.svg">
-</p>
 
 </div>
 
@@ -46,8 +42,6 @@ To access the layout use [Figma](https://www.figma.com/file/Snen317VmzHluRUHBRlz
 ---
 
 ### ✨ Sobre o projeto:
-
-<img src="assets/logo.svg">
 
 O Proffy é projeto desenvolvido para conectar professores a alunos.
 
