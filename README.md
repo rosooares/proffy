@@ -45,9 +45,21 @@ To access the layout use [Figma](https://www.figma.com/file/Snen317VmzHluRUHBRlz
 
 O Proffy é projeto desenvolvido para conectar professores a alunos.
 
-<p align="center">
-<img width="600" src="assets/proffy.png">
-</p>
+### Web Screenshot
+
+<div>
+   <img src="assets/web-landing.png" width="400px">
+   <img src="assets/web-list.png" width="400px">
+</div>
+
+### Mobile Screenshot
+
+<div>
+   <img src="assets/mobile-splash.png" width="180">
+   <img src="assets/mobile-onboarding.png" width="180">
+   <img src="assets/mobile-home.png" width="180">
+   <img src="assets/mobile-favoritos.png" width="180">
+</div>
 
 ---
 
@@ -94,6 +106,26 @@ $ npm install
 $ npm start
 
 # running on port 3000
+```
+
+Acesse a pasta app-mobile e faça as instalações:
+
+```
+# Acesse a pasta do mobile
+$ cd app-mobile/
+
+# Instale as dependencias
+$ npm install
+
+# Rode
+$ npm start
+
+# A Expo será aberta, basta digitalizar o qrcode no terminal ou na página da exposição
+
+# Se houver algum problema com as fontes, execute:
+$ expo install expo-font @expo-google-fonts/ubuntu @expo-google-fonts/roboto
+
+# Você pode installar o aplicativo Expo para testar no celular
 ```
 
 ---
