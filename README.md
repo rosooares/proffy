@@ -108,11 +108,11 @@ $ npm start
 # running on port 3000
 ```
 
-Acesse a pasta app-mobile e faça as instalações:
+Acesse a pasta mobile e faça as instalações:
 
 ```
 # Acesse a pasta do mobile
-$ cd app-mobile/
+$ cd mobile/
 
 # Instale as dependencias
 $ npm install
